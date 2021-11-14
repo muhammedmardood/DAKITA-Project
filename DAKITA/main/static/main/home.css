@@ -1,0 +1,123 @@
+body{
+	background-image: url(img1.png);
+	width: 100vw;
+	height: 100vh;	
+	padding:0;
+	margin:0;
+}
+.container{
+	width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 0px;
+}
+.box{
+	background-color: #fff;
+	height: 566px;
+	width: 361px;
+	border-radius: 15px;
+	box-shadow: 0px 0px 15px 0px #000000;
+	position: relative;
+	display: flex;
+	MARGIN-LEFT: 30px;
+    MARGIN-RIGHT: 30PX;
+}
+.box0 .username{
+	height: 149px;
+}
+
+.username{
+	background-color: #000;
+	position: absolute;
+	height: 105px;
+	width: 307px;
+	border-radius: 30px;
+	box-shadow:0px 0px 50px #00000080;
+	transform: translatex(-50%);
+	left: 50%;
+	top: 7%;
+	text-decoration:none;
+	color: #fff;
+	text-align: center;
+	overflow: hidden;
+}
+.btn{
+	position: absolute;
+    color: #fff;
+    background: rgb(63,94,251);
+    background: transparent linear-gradient(287deg, #FC9803 0%, #B98202 15%, #E603CF 52%, #7E0202 100%) 0% 0% no-repeat padding-box;
+    bottom: 120px;
+    left: 50%;
+    transform: translatex(-50%);
+    height: 48px;
+    width: 231px;
+    border: none;
+    border-radius: 24px;
+	opacity: 1;
+	font: normal normal bold 25px/33px Segoe UI;
+	cursor: pointer;
+	outline: none;
+}
+.username p{
+	font: normal normal bold 25px/33px Segoe UI;
+	font-size: x-large;
+}
+.p{
+	font: normal normal bold 25px/33px Segoe UI;
+	font-size: x-large;
+	margin: 0;
+	padding-top: 7px;
+}
+input{
+	background-color: rgba(0, 0, 0, 0);
+	position: absolute;
+	width: 250px;
+	height: 30px;
+	bottom: 300px;
+	left: 50%;
+    transform: translatex(-50%);
+	border: 0 0 ;
+	border-top-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+	border-bottom-style: groove;
+	font: normal normal 25px/33px Segoe UI;
+	font-size: x-large;
+	outline: none;
+}
+.byo{
+	bottom: 190px;
+}
+.box3 .username{
+    height: 80PX;
+}
+.postimg{
+    position: absolute;
+    width: 210px;
+    height: 280px;
+    left: 50%;
+    transform: translatex(-50%);
+	left: 50%;
+    top: 26%;
+    border-radius: 23px;
+    box-shadow: 30%;
+}
+.download-btn{
+    bottom: 10%;
+}
+
+.back{
+	font-size: large;
+	bottom: 5%;
+}
+
+.logo{
+	font: normal normal bold 25px/33px Segoe UI;
+	font-size: xx-large;
+	color: white;
+	left: 9%;
+	top: 3%;
+	position: absolute;
+}

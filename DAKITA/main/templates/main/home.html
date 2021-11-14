@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/home.css' %}">
+    <link rel="stylesheet" href="{% static 'main/profile.css' %}">
+    <link rel="icon">
+    <title>DAKITA</title>
+</head>
+
+<body>
+    <span class="logo">DAK<br>I&nbsp;T&nbsp;A&nbsp;</span>
+    <div class="container">
+        <!--<div class="box box0">
+			<div class="username">
+				<p>Tybe your user name <br> for dowload a photo <br>or video</p> 
+			</div>
+			<input type="text" placeholder="post URL">
+			<a href="post.html" ><button type="button"  class="btn">
+				<span>GO</span>
+			</button></a>
+		</div>-->
+        <div class="box box1">
+            {% if tcuser == None %}
+            <div class="username">
+                <p>Enter an username to get its profile photo</p>
+            </div>
+            <form method="get">
+                <input type="text" placeholder="user name" name="tcname" required>
+                <input class="btn" type="submit" value="search" name="name">
+                {% elif result == "Can't find the user" %}
+                <div class="usererror">
+                    <p class="p">{{result}}</p>
+                </div>
+                <a href="{% url 'home' %}"><button type="button" class="btn download-btn0">
+                        back
+                    </button></a>
+                {% else %}
+                <div class="user">
+                    <p class="p">@{{tcuser}}</p>
+                </div><br>
+                <img src="{% static 'main/1.jpg' %}" alt="{{ tcuser }}" class="postimg">
+                <a href="{% static 'main/1.jpg' %}" download="{% static 'main/1.jpg' %}"><button type="button"
+                        class="btn download-btn0">
+                        Download profile photo
+                    </button></a>
+                <a href="{% url 'home' %}"><button type="button" class="btn back">
+                        back
+                    </button></a>
+                {% endif %}
+            </form>
+            <!--<button src="#" class="btn byo">
+				<span>Byo</span>
+			</button>-->
+        </div>
+    </div>
+</body>
+
+</html>

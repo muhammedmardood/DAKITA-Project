@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <title>Text To Sound</title>
+</head>
+
+<body>
+    <div class="div">
+        <form action="#" method="get">
+            <input id="txt" class="txt" type="text" name="text">
+            <select class="btn" name="l">
+                {% for l in langs %}
+                {% for key, value in l.items %}
+                <option value="{{ key }}">{{ value }}</option>
+                {% endfor %}
+                {% endfor %}
+            </select><br>
+            <input class="btn" type="submit" name="submit" id="submit" value="submit">
+            <button class="btn" type="button" value="play" id="play"><i class="fa fa-play"></i> Play</button>
+        </form>
+    </div>
+</body>
+<script>
+    var btn = document.getElementById("play");
+    var submit = document.getElementById("submit")
+    var text = document.getElementById("txt");
+
+    var aud = new Audio("{% static 'main/aud.wav' %}");
+
+    if(text.value == ''){
+        submit.disabled = false;
+    }
+
+    btn.addEventListener("click", () => {
+        aud.play()
+    })
+</script>
+</html>
